@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import RecursiveComponent from './RecursiveComponent';
+import React, { Component } from "react";
+import { RecursiveComponent } from "./RecursiveComponent";
 
-// write components here
-// const One and so on...
+const One = () => <p>One</p>;
+const Two = () => <p>Two</p>;
+const Three = () => <p>Three</p>;
 
-// assign components below
-const components = [];
+const components = [One, Two, Three];
 
 export default class Recursion extends Component {
-	render() {
-  	return (
-    	<div className='App-wrapper'>
+  render() {
+    return (
+      <div className="App-wrapper">
         <RecursiveComponent components={components} />
       </div>
     );
   }
-};
+}
